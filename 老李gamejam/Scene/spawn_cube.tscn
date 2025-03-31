@@ -1,0 +1,14 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5q0ijwnfv8lg"]
+
+[ext_resource type="Script" uid="uid://yylxxal7esyl" path="res://Scene/spawn_cube.gd" id="1_vc3up"]
+[ext_resource type="PackedScene" uid="uid://dlyu81vv30k1k" path="res://Scene/Cube/i_cube.tscn" id="2_t8nlb"]
+[ext_resource type="PackedScene" uid="uid://b5pndq0gxev27" path="res://Scene/Cube/j_cube.tscn" id="3_4wipo"]
+[ext_resource type="PackedScene" uid="uid://d4micbd030w7i" path="res://Scene/Cube/l_cube.tscn" id="4_hntnr"]
+[ext_resource type="PackedScene" uid="uid://btfi5lpr3y30b" path="res://Scene/Cube/o_cube.tscn" id="5_51fft"]
+[ext_resource type="PackedScene" uid="uid://chxyhsacqd14e" path="res://Scene/Cube/s_cube.tscn" id="6_7mvb1"]
+[ext_resource type="PackedScene" uid="uid://br031mrv6nv3i" path="res://Scene/Cube/t_cube.tscn" id="7_8eafi"]
+[ext_resource type="PackedScene" uid="uid://cx6s2ia7ys1wi" path="res://Scene/Cube/z_cube.tscn" id="8_wo6b6"]
+
+[node name="SpawnCube" type="Node3D"]
+script = ExtResource("1_vc3up")
+blocks = Array[PackedScene]([ExtResource("2_t8nlb"), ExtResource("3_4wipo"), ExtResource("4_hntnr"), ExtResource("5_51fft"), ExtResource("6_7mvb1"), ExtResource("7_8eafi"), ExtResource("8_wo6b6")])

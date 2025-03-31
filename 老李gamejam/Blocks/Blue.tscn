@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2t52oy1bq7l3"]
+
+[ext_resource type="PackedScene" uid="uid://nu8a8josbc6j" path="res://Assets/gltf/colored_block_blue.gltf" id="1_iwdnh"]
+[ext_resource type="Script" uid="uid://1mf6abgot8d7" path="res://Blocks/block.gd" id="2_oykgm"]
+
+[node name="Blue" instance=ExtResource("1_iwdnh")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("2_oykgm")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5pndq0gxev27"]
+
+[ext_resource type="Script" uid="uid://bit20v3l7rq5c" path="res://Scene/Cube/CubeController.gd" id="1_g0r0x"]
+[ext_resource type="PackedScene" uid="uid://qhs5om103741" path="res://Blocks/yellow.tscn" id="2_uipf0"]
+
+[node name="JCube" type="Node3D"]
+script = ExtResource("1_g0r0x")
+
+[node name="Cube" type="Node3D" parent="."]
+
+[node name="Yellow" parent="Cube" instance=ExtResource("2_uipf0")]
+
+[node name="Yellow3" parent="Cube" instance=ExtResource("2_uipf0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0, 0)
+
+[node name="Yellow4" parent="Cube" instance=ExtResource("2_uipf0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 1, 0)
+
+[node name="Yellow2" parent="Cube" instance=ExtResource("2_uipf0")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 0, 0)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

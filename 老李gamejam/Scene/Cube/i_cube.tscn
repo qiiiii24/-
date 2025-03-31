@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlyu81vv30k1k"]
+
+[ext_resource type="Script" uid="uid://bit20v3l7rq5c" path="res://Scene/Cube/CubeController.gd" id="1_mw12w"]
+
+[node name="ICube" type="Node3D"]
+script = ExtResource("1_mw12w")
+
+[node name="Cube" type="Node3D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

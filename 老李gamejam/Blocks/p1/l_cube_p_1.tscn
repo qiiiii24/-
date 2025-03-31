@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3dae878t1bhp"]
+
+[ext_resource type="PackedScene" uid="uid://dlyu81vv30k1k" path="res://Scene/Cube/i_cube.tscn" id="1_jl7bi"]
+[ext_resource type="PackedScene" uid="uid://dpmhd1g20xmw1" path="res://Blocks/red.tscn" id="2_lqgxi"]
+
+[node name="LCube_p1" instance=ExtResource("1_jl7bi")]
+
+[node name="Red" parent="Cube" index="0" instance=ExtResource("2_lqgxi")]
+
+[node name="Red2" parent="Cube" index="1" instance=ExtResource("2_lqgxi")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -1)
+
+[node name="Red4" parent="Cube" index="2" instance=ExtResource("2_lqgxi")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, -1)
+
+[node name="Red3" parent="Cube" index="3" instance=ExtResource("2_lqgxi")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 1)

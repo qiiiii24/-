@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://br031mrv6nv3i"]
+
+[ext_resource type="Script" uid="uid://bit20v3l7rq5c" path="res://Scene/Cube/CubeController.gd" id="1_efaei"]
+[ext_resource type="PackedScene" uid="uid://d2t52oy1bq7l3" path="res://Blocks/Blue.tscn" id="2_lsr3g"]
+
+[node name="TCube" type="Node3D"]
+script = ExtResource("1_efaei")
+
+[node name="Cube" type="Node3D" parent="."]
+
+[node name="Blue" parent="Cube" instance=ExtResource("2_lsr3g")]
+
+[node name="Blue4" parent="Cube" instance=ExtResource("2_lsr3g")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0)
+
+[node name="Blue3" parent="Cube" instance=ExtResource("2_lsr3g")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -1, 0, 0)
+
+[node name="Blue2" parent="Cube" instance=ExtResource("2_lsr3g")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1, 0, 0)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

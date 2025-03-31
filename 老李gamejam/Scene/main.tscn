@@ -1,0 +1,658 @@
+[gd_scene load_steps=42 format=3 uid="uid://dqpj837ujama2"]
+
+[ext_resource type="Script" uid="uid://cd2celb73rfxl" path="res://Scene/main.gd" id="1_2ix4a"]
+[ext_resource type="PackedScene" uid="uid://c0fv6ec3n4o3d" path="res://Blocks/Walls/wall_1.tscn" id="1_r34rm"]
+[ext_resource type="PackedScene" uid="uid://b5q0ijwnfv8lg" path="res://Scene/spawn_cube.tscn" id="3_r34rm"]
+[ext_resource type="PackedScene" uid="uid://dx45w0gnjgl58" path="res://Blocks/p1/i_cube_p1.tscn" id="4_3amdw"]
+[ext_resource type="PackedScene" uid="uid://dseihv7txh6hs" path="res://Blocks/p2/i_cube_p2.tscn" id="5_1xcnr"]
+[ext_resource type="PackedScene" uid="uid://d4cmqokejwfnn" path="res://Blocks/p1/j_cube_p_1.tscn" id="6_0y2cb"]
+[ext_resource type="PackedScene" uid="uid://c3dae878t1bhp" path="res://Blocks/p1/l_cube_p_1.tscn" id="7_2ix4a"]
+[ext_resource type="PackedScene" uid="uid://c0atixhkdxxs6" path="res://Blocks/p1/o_cube_p_1.tscn" id="8_p2wc2"]
+[ext_resource type="PackedScene" uid="uid://txkft3n0roql" path="res://Blocks/p1/s_cube_p_1.tscn" id="9_jbas8"]
+[ext_resource type="PackedScene" uid="uid://bgore3dftww8y" path="res://Blocks/p1/t_cube_p_1.tscn" id="10_p4j74"]
+[ext_resource type="PackedScene" uid="uid://cxmkoqcjtolb1" path="res://Blocks/p1/z_cube_p_1.tscn" id="11_hiice"]
+[ext_resource type="PackedScene" uid="uid://ce3wnoyvrkbne" path="res://Blocks/p2/j_cube_p_2.tscn" id="12_sor6r"]
+[ext_resource type="PackedScene" uid="uid://sbbww4ws0imp" path="res://Blocks/p2/l_cube_p_2.tscn" id="13_pqe63"]
+[ext_resource type="PackedScene" uid="uid://b2j4ylm8cmxdy" path="res://Blocks/p2/o_cube_p_2.tscn" id="14_aam5o"]
+[ext_resource type="PackedScene" uid="uid://lk1etyv1xqu0" path="res://Blocks/p2/s_cube_p_2.tscn" id="15_nyb1q"]
+[ext_resource type="PackedScene" uid="uid://cmaoxxdk38fd1" path="res://Blocks/p2/t_cube_p_2.tscn" id="16_xw8bv"]
+[ext_resource type="PackedScene" uid="uid://t8oll4ky6ebi" path="res://Blocks/p2/z_cube_p_2.tscn" id="17_wimqa"]
+[ext_resource type="Texture2D" uid="uid://bnqbuopvot20d" path="res://Assets/crosshair001-sheet.png" id="20_hiice"]
+[ext_resource type="Texture2D" uid="uid://b3gxo5shvtqvi" path="res://Assets/white.png" id="20_jbas8"]
+[ext_resource type="Texture2D" uid="uid://cob6xbyn3j8x" path="res://Assets/tilemap_black_packed.png" id="20_p4j74"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_r34rm"]
+viewport_path = NodePath("SubViewport1")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2wwxx"]
+viewport_path = NodePath("SubViewport2")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jbas8"]
+panorama = ExtResource("20_jbas8")
+
+[sub_resource type="Sky" id="Sky_hiice"]
+sky_material = SubResource("PanoramaSkyMaterial_jbas8")
+process_mode = 3
+
+[sub_resource type="Environment" id="Environment_sor6r"]
+background_mode = 2
+sky = SubResource("Sky_hiice")
+tonemap_mode = 3
+tonemap_exposure = 0.55
+tonemap_white = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hiice"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(288, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sor6r"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(288, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqe63"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(320, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aam5o"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(304, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyb1q"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(320, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw8bv"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(272, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wimqa"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(512, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t372l"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(528, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uctnp"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(496, 192, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m37ut"]
+atlas = ExtResource("20_p4j74")
+region = Rect2(272, 16, 16, 16)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sor6r"]
+particles_animation = true
+particles_anim_h_frames = 12
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_pqe63"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_aam5o"]
+gradient = SubResource("Gradient_pqe63")
+
+[sub_resource type="Curve" id="Curve_nyb1q"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.519164, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.155), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_xw8bv"]
+curve = SubResource("Curve_nyb1q")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wimqa"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(150, 1, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+direction = Vector3(0, 1, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 25.0
+gravity = Vector3(0, 0, 0)
+damping_min = 14.462
+damping_max = 20.923
+scale_min = 0.2
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_xw8bv")
+color_ramp = SubResource("GradientTexture1D_aam5o")
+anim_offset_max = 1.0
+
+[node name="Main" type="Node3D" groups=["main"]]
+script = ExtResource("1_2ix4a")
+
+[node name="SubViewport1" type="SubViewport" parent="."]
+
+[node name="Camera3DP1" type="Camera3D" parent="SubViewport1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16, 9.02, 20.429)
+projection = 1
+size = 21.111
+
+[node name="SubViewport2" type="SubViewport" parent="."]
+
+[node name="Camera3DP2" type="Camera3D" parent="SubViewport2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 17, 9.02, 2.217)
+projection = 1
+size = 21.111
+
+[node name="Frame" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3, -1, 10)
+
+[node name="Wall" parent="Frame" instance=ExtResource("1_r34rm")]
+
+[node name="Wall9" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Wall10" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Wall11" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Wall12" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="Wall64" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 0)
+
+[node name="Wall65" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 0)
+
+[node name="Wall66" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 6, 0)
+
+[node name="Wall67" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8, 0)
+
+[node name="Wall68" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 10, 0)
+
+[node name="Wall69" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 12, 0)
+
+[node name="Wall70" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 14, 0)
+
+[node name="Wall71" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 16, 0)
+
+[node name="Wall72" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 20, 0)
+
+[node name="Wall73" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 18, 0)
+
+[node name="Wall74" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 22, 0)
+
+[node name="Wall75" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 24, 0)
+
+[node name="Wall76" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 26, 0)
+
+[node name="Wall77" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 28, 0)
+
+[node name="Wall78" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 30, 0)
+
+[node name="Wall79" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 32, 0)
+
+[node name="Wall80" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 34, 0)
+
+[node name="Wall81" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 36, 0)
+
+[node name="Wall82" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 38, 0)
+
+[node name="Wall83" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 40, 0)
+
+[node name="Wall33" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -2)
+
+[node name="Wall34" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -4)
+
+[node name="Wall35" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -6)
+
+[node name="Wall36" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -8)
+
+[node name="Wall37" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -10)
+
+[node name="Wall38" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -12)
+
+[node name="Wall39" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -14)
+
+[node name="Wall40" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -16)
+
+[node name="Wall41" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -18)
+
+[node name="Wall42" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -20)
+
+[node name="Wall43" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -22)
+
+[node name="Wall44" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, -22)
+
+[node name="Wall45" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, -22)
+
+[node name="Wall46" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 6, -22)
+
+[node name="Wall47" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8, -22)
+
+[node name="Wall48" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 10, -22)
+
+[node name="Wall49" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 12, -22)
+
+[node name="Wall50" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 14, -22)
+
+[node name="Wall51" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 16, -22)
+
+[node name="Wall52" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 18, -22)
+
+[node name="Wall53" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 20, -22)
+
+[node name="Wall54" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 22, -22)
+
+[node name="Wall55" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 24, -22)
+
+[node name="Wall56" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 26, -22)
+
+[node name="Wall57" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 28, -22)
+
+[node name="Wall58" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 30, -22)
+
+[node name="Wall59" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 32, -22)
+
+[node name="Wall60" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 34, -22)
+
+[node name="Wall61" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 36, -22)
+
+[node name="Wall62" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 38, -22)
+
+[node name="Wall63" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 40, -22)
+
+[node name="Wall13" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 2, 0)
+
+[node name="Wall14" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 4, 0)
+
+[node name="Wall15" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 6, 0)
+
+[node name="Wall16" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 8, 0)
+
+[node name="Wall17" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 10, 0)
+
+[node name="Wall18" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 12, 0)
+
+[node name="Wall19" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 14, 0)
+
+[node name="Wall20" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 16, 0)
+
+[node name="Wall21" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 18, 0)
+
+[node name="Wall22" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 20, 0)
+
+[node name="Wall23" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 22, 0)
+
+[node name="Wall24" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 24, 0)
+
+[node name="Wall25" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 26, 0)
+
+[node name="Wall26" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 28, 0)
+
+[node name="Wall27" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 30, 0)
+
+[node name="Wall28" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 32, 0)
+
+[node name="Wall29" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 34, 0)
+
+[node name="Wall30" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 36, 0)
+
+[node name="Wall31" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 38, 0)
+
+[node name="Wall32" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 40, 0)
+
+[node name="Wall2" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Wall3" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Wall4" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Wall5" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="Wall6" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Wall7" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="Wall8" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+
+[node name="SpawnCube" parent="." instance=ExtResource("3_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 20, 4)
+blocks = Array[PackedScene]([ExtResource("4_3amdw"), ExtResource("6_0y2cb"), ExtResource("7_2ix4a"), ExtResource("8_p2wc2"), ExtResource("9_jbas8"), ExtResource("10_p4j74"), ExtResource("11_hiice"), ExtResource("5_1xcnr"), ExtResource("12_sor6r"), ExtResource("13_pqe63"), ExtResource("14_aam5o"), ExtResource("15_nyb1q"), ExtResource("16_xw8bv"), ExtResource("17_wimqa")])
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(576, 648)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ViewportTexture_r34rm")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(576, 648)
+offset_left = 576.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("ViewportTexture_2wwxx")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sor6r")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="UI"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 24.0
+offset_right = 100.0
+offset_bottom = 69.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "分数：0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player1" type="Control" parent="UI"]
+anchors_preset = 0
+offset_top = 55.0
+offset_right = 40.0
+offset_bottom = 95.0
+
+[node name="W" type="TextureRect" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 37.0
+offset_right = 70.0
+offset_bottom = 77.0
+texture = SubResource("AtlasTexture_hiice")
+
+[node name="A" type="TextureRect" parent="UI/Player1"]
+layout_mode = 0
+offset_top = 73.0
+offset_right = 40.0
+offset_bottom = 113.0
+texture = SubResource("AtlasTexture_sor6r")
+
+[node name="D" type="TextureRect" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 73.0
+offset_right = 101.0
+offset_bottom = 113.0
+texture = SubResource("AtlasTexture_pqe63")
+
+[node name="S" type="TextureRect" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 73.0
+offset_right = 70.0
+offset_bottom = 113.0
+texture = SubResource("AtlasTexture_aam5o")
+
+[node name="R" type="TextureRect" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 37.0
+offset_right = 120.0
+offset_bottom = 77.0
+texture = SubResource("AtlasTexture_nyb1q")
+
+[node name="Label" type="Label" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 11.0
+offset_right = 65.0
+offset_bottom = 34.0
+text = "移动"
+
+[node name="Label2" type="Label" parent="UI/Player1"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 11.0
+offset_right = 120.0
+offset_bottom = 34.0
+text = "旋转"
+
+[node name="Player2" type="Control" parent="UI"]
+anchors_preset = 0
+offset_left = 996.0
+offset_top = 95.0
+offset_right = 1036.0
+offset_bottom = 135.0
+
+[node name="上" type="TextureRect" parent="UI/Player2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_xw8bv")
+
+[node name="下" type="TextureRect" parent="UI/Player2"]
+layout_mode = 0
+offset_top = 36.0
+offset_right = 40.0
+offset_bottom = 76.0
+texture = SubResource("AtlasTexture_wimqa")
+
+[node name="左" type="TextureRect" parent="UI/Player2"]
+layout_mode = 0
+offset_left = -30.0
+offset_top = 36.0
+offset_right = 10.0
+offset_bottom = 76.0
+texture = SubResource("AtlasTexture_t372l")
+
+[node name="右" type="TextureRect" parent="UI/Player2"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 36.0
+offset_right = 70.0
+offset_bottom = 76.0
+texture = SubResource("AtlasTexture_uctnp")
+
+[node name="旋转" type="TextureRect" parent="UI/Player2"]
+layout_mode = 0
+offset_left = 60.0
+offset_right = 100.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_m37ut")
+
+[node name="Label" type="Label" parent="UI/Player2"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -26.0
+offset_right = 32.0
+offset_bottom = -3.0
+text = "移动"
+
+[node name="Label2" type="Label" parent="UI/Player2"]
+layout_mode = 0
+offset_left = 60.0
+offset_top = -26.0
+offset_right = 100.0
+offset_bottom = -3.0
+text = "旋转"
+
+[node name="Start" type="Button" parent="UI"]
+custom_minimum_size = Vector2(200, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -26.5
+offset_right = 100.0
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "开始游戏"
+
+[node name="Gameover" type="Control" parent="UI"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI/Gameover"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.596078)
+
+[node name="Label" type="Label" parent="UI/Gameover"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -44.0
+offset_right = 128.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "游戏结束"
+
+[node name="Reset" type="Button" parent="UI/Gameover"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 84.0
+offset_right = 8.0
+offset_bottom = 92.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "重来"
+
+[node name="Label" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.0
+offset_top = 41.0
+offset_right = 228.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 24
+text = "这是一款同一空间不同视角的俄罗斯方块，
+所以多使用旋转吧"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_sor6r")
+position = Vector2(346, 611)
+emitting = false
+amount = 32
+texture = ExtResource("20_hiice")
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_wimqa")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_sor6r")
+position = Vector2(804, 611)
+emitting = false
+amount = 32
+texture = ExtResource("20_hiice")
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_wimqa")

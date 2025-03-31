@@ -1,0 +1,213 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqpj837ujama2"]
+
+[ext_resource type="PackedScene" uid="uid://c0fv6ec3n4o3d" path="res://Blocks/Walls/wall_1.tscn" id="1_r34rm"]
+[ext_resource type="PackedScene" uid="uid://d3eexljdfavex" path="res://Blocks/Walls/wall_2.tscn" id="2_2wwxx"]
+[ext_resource type="PackedScene" uid="uid://b5q0ijwnfv8lg" path="res://Scene/spawn_cube.tscn" id="3_r34rm"]
+
+[sub_resource type="Environment" id="Environment_sblpm"]
+background_energy_multiplier = 2.5
+
+[node name="Main" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 20.2885, 8.42885)
+environment = SubResource("Environment_sblpm")
+projection = 1
+size = 50.0
+
+[node name="Frame" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -1, 0)
+
+[node name="Wall" parent="Frame" instance=ExtResource("1_r34rm")]
+
+[node name="Wall9" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0)
+
+[node name="Wall10" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="Wall11" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="Wall12" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, 0)
+
+[node name="Wall13" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 2, 0)
+
+[node name="Wall14" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4, 0)
+
+[node name="Wall15" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 6, 0)
+
+[node name="Wall16" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 8, 0)
+
+[node name="Wall17" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 10, 0)
+
+[node name="Wall18" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 12, 0)
+
+[node name="Wall19" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 14, 0)
+
+[node name="Wall20" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 16, 0)
+
+[node name="Wall21" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 18, 0)
+
+[node name="Wall22" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 20, 0)
+
+[node name="Wall23" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 22, 0)
+
+[node name="Wall24" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 24, 0)
+
+[node name="Wall25" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 26, 0)
+
+[node name="Wall26" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 28, 0)
+
+[node name="Wall27" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 30, 0)
+
+[node name="Wall28" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 32, 0)
+
+[node name="Wall29" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 34, 0)
+
+[node name="Wall30" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 36, 0)
+
+[node name="Wall31" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 38, 0)
+
+[node name="Wall32" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 40, 0)
+
+[node name="Wall2" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="Wall3" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="Wall4" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Wall5" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="Wall6" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="Wall7" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="Wall8" parent="Frame" instance=ExtResource("1_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+
+[node name="Frame2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, -1, 0)
+
+[node name="Wall_2" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Wall_3" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="Wall_4" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+
+[node name="Wall_5" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8)
+
+[node name="Wall_6" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+
+[node name="Wall_7" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="Wall_8" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+
+[node name="Wall_9" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="Wall_10" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -18)
+
+[node name="Wall_11" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20)
+
+[node name="Wall_12" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -22)
+
+[node name="Wall_13" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -22)
+
+[node name="Wall_14" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -22)
+
+[node name="Wall_15" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, -22)
+
+[node name="Wall_16" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -22)
+
+[node name="Wall_17" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, -22)
+
+[node name="Wall_18" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, -22)
+
+[node name="Wall_19" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, -22)
+
+[node name="Wall_20" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, -22)
+
+[node name="Wall_21" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 18, -22)
+
+[node name="Wall_22" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -22)
+
+[node name="Wall_23" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22, -22)
+
+[node name="Wall_24" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 24, -22)
+
+[node name="Wall_25" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26, -22)
+
+[node name="Wall_26" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 28, -22)
+
+[node name="Wall_27" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 30, -22)
+
+[node name="Wall_28" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32, -22)
+
+[node name="Wall_29" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 34, -22)
+
+[node name="Wall_30" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36, -22)
+
+[node name="Wall_31" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 38, -22)
+
+[node name="Wall_32" parent="Frame2" instance=ExtResource("2_2wwxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 40, -22)
+
+[node name="SpawnCube" parent="." instance=ExtResource("3_r34rm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 41, 0)
